@@ -39,35 +39,45 @@ function Services() {
     ]
 
     return (
-        <section id="services" className="py-32 px-6">
+        <section id="services" className="py-12 px-6 bg-black">
             <div className="max-w-6xl mx-auto">
                 {/* Section Label */}
-                <p className="text-sm uppercase tracking-wide text-gray-400 mb-4">
+                <p className="text-sm uppercase tracking-wide text-neutral-500 mb-4 font-medium">
                     Services
                 </p>
 
                 {/* Section Heading */}
-                <h2 className="text-3xl font-light text-white mb-16">
+                <h2 className="text-3xl font-semibold text-white mb-16">
                     What I Offer
                 </h2>
 
-                {/* Services Grid */}
-                <div className="grid md:grid-cols-2 gap-12">
+                {/* Services Grid - Bento Style */}
+                <div className="grid md:grid-cols-2 gap-6">
                     {services.map((service, index) => (
-                        <div key={index} className="space-y-4">
-                            <h3 className="text-xl font-light text-white">
-                                {service.title}
-                            </h3>
-                            <p className="text-gray-400 leading-relaxed">
-                                {service.description}
-                            </p>
-                            <ul className="space-y-2">
-                                {service.deliverables.map((item, idx) => (
-                                    <li key={idx} className="text-sm text-gray-500 leading-relaxed">
-                                        • {item}
-                                    </li>
-                                ))}
-                            </ul>
+                        <div
+                            key={index}
+                            className="relative group"
+                        >
+                            {/* Glow Effect */}
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition duration-500"></div>
+
+                            {/* Card */}
+                            <div className="relative bg-black border border-white/[0.1] rounded-3xl p-8 hover:border-white/[0.2] transition-all duration-300 backdrop-blur-md">
+                                <h3 className="text-xl font-semibold text-white mb-3">
+                                    {service.title}
+                                </h3>
+                                <p className="text-neutral-400 leading-relaxed mb-6">
+                                    {service.description}
+                                </p>
+                                <ul className="space-y-3">
+                                    {service.deliverables.map((item, idx) => (
+                                        <li key={idx} className="text-sm text-neutral-500 leading-relaxed flex items-start">
+                                            <span className="text-cyan-400 mr-2">•</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     ))}
                 </div>

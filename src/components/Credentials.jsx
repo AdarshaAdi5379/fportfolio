@@ -1,35 +1,57 @@
 import { useState, useEffect } from 'react'
-import { Code2, Lightbulb, Briefcase } from 'lucide-react'
+import { GraduationCap, Award } from 'lucide-react'
 
-function About() {
+function Credentials() {
     const [activeIndex, setActiveIndex] = useState(0)
 
     const cards = [
         {
-            icon: Code2,
-            title: "Professional Background",
-            description: "I'm a full-stack developer and AI engineer with a focus on building production-ready systems. My work spans web applications, machine learning solutions, and cloud infrastructure—always with an emphasis on reliability, scalability, and clean code.",
-            accent: "#38BDF8"
+            icon: GraduationCap,
+            title: "Education",
+            items: [
+                {
+                    degree: "Bachelor of Technology in Computer Science",
+                    institution: "Visveswaraya Technological University",
+                    period: "2022 - 2026",
+                    details: "Strong foundation in algorithms, data structures, software engineering, and artificial intelligence"
+                }
+            ],
+            accent: "#F59E0B"
         },
         {
-            icon: Lightbulb,
-            title: "Engineering Philosophy",
-            description: "I believe in production-first engineering: writing code that works, ships, and maintains well. Every project is an opportunity to solve real problems with thoughtful architecture and pragmatic technology choices.",
-            accent: "#A78BFA"
-        },
-        {
-            icon: Briefcase,
-            title: "Freelance Availability",
-            description: "I'm available for freelance projects, contract work, and full-time opportunities. I work with startups, small businesses, and technical teams who need end-to-end development, AI integration, or cloud deployment expertise.",
-            accent: "#34D399"
+            icon: Award,
+            title: "Certifications",
+            items: [
+                {
+                    name: "AWS Certified Solutions Architect",
+                    issuer: "Amazon Web Services",
+                    description: "Cloud architecture and infrastructure design"
+                },
+                {
+                    name: "Google Cloud Professional Developer",
+                    issuer: "Google Cloud",
+                    description: "Cloud-native application development"
+                },
+                {
+                    name: "TensorFlow Developer Certificate",
+                    issuer: "TensorFlow",
+                    description: "Machine learning and deep learning"
+                },
+                {
+                    name: "Full Stack Web Development Specialization",
+                    issuer: "Coursera",
+                    description: "End-to-end web application development"
+                }
+            ],
+            accent: "#EC4899"
         }
     ]
 
-    // Auto-rotate cards every 4 seconds
+    // Auto-rotate cards every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prev) => (prev + 1) % cards.length)
-        }, 4000)
+        }, 5000)
         return () => clearInterval(interval)
     }, [cards.length])
 
@@ -47,48 +69,41 @@ function About() {
         } else if (position === 1) {
             // First card behind
             return {
-                transform: 'translateY(-16px) scale(0.95)',
+                transform: 'translateY(-20px) scale(0.94)',
                 zIndex: 20,
-                opacity: 0.7,
-            }
-        } else if (position === 2) {
-            // Second card behind
-            return {
-                transform: 'translateY(-32px) scale(0.9)',
-                zIndex: 10,
-                opacity: 0.4,
+                opacity: 0.6,
             }
         } else {
             // Hidden cards
             return {
-                transform: 'translateY(-48px) scale(0.85)',
-                zIndex: 0,
+                transform: 'translateY(-40px) scale(0.88)',
+                zIndex: 10,
                 opacity: 0,
             }
         }
     }
 
     return (
-        <section id="about" className="py-20 px-6 bg-black">
+        <section id="credentials" className="py-20 px-6 bg-black">
             <div className="max-w-6xl mx-auto">
                 {/* Section Label */}
                 <p className="text-sm uppercase tracking-wide text-neutral-500 mb-4 font-medium">
-                    About
+                    Credentials
                 </p>
 
                 {/* Section Heading */}
                 <h2 className="text-3xl font-semibold text-white mb-4">
-                    Background & Approach
+                    Education & Expertise
                 </h2>
 
                 <p className="text-neutral-400 text-base max-w-2xl mb-16">
-                    A comprehensive overview of my professional journey, philosophy, and expertise.
+                    Academic background, professional certifications, and core areas of specialization.
                 </p>
 
                 {/* Stacked Cards Container */}
                 <div className="relative w-full max-w-4xl mx-auto">
                     {/* Card Stack */}
-                    <div className="relative h-[400px] md:h-[350px]">
+                    <div className="relative h-[500px] md:h-[450px]">
                         {cards.map((card, index) => {
                             const style = getCardStyle(index)
                             const Icon = card.icon
@@ -103,10 +118,10 @@ function About() {
                                         opacity: style.opacity,
                                     }}
                                 >
-                                    <div className="bg-neutral-900 border border-white/10 rounded-3xl p-8 md:p-10 h-full shadow-2xl shadow-black/50 flex flex-col">
+                                    <div className="bg-neutral-900 border border-white/10 rounded-3xl p-8 md:p-10 h-full shadow-2xl shadow-black/50 flex flex-col overflow-y-auto">
                                         {/* Icon with Accent Color */}
                                         <div
-                                            className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                                            className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 flex-shrink-0"
                                             style={{
                                                 backgroundColor: `${card.accent}20`,
                                             }}
@@ -118,17 +133,49 @@ function About() {
                                         </div>
 
                                         {/* Card Title */}
-                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-tight flex-shrink-0">
                                             {card.title}
                                         </h3>
 
-                                        {/* Card Description */}
-                                        <p className="text-neutral-400 leading-relaxed text-base md:text-lg flex-grow">
-                                            {card.description}
-                                        </p>
+                                        {/* Card Content - Dynamic based on card type */}
+                                        <div className="space-y-6 flex-grow">
+                                            {card.title === "Education" && card.items.map((item, idx) => (
+                                                <div key={idx} className="space-y-2">
+                                                    <h4 className="text-lg font-semibold text-white">
+                                                        {item.degree}
+                                                    </h4>
+                                                    <p className="text-neutral-400 text-sm">
+                                                        {item.institution}
+                                                    </p>
+                                                    <p className="text-neutral-500 text-sm font-medium">
+                                                        {item.period}
+                                                    </p>
+                                                    <p className="text-neutral-400 text-sm leading-relaxed mt-2">
+                                                        {item.details}
+                                                    </p>
+                                                </div>
+                                            ))}
+
+                                            {card.title === "Certifications" && card.items.map((item, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="pb-4 border-b border-neutral-800 last:border-0 last:pb-0"
+                                                >
+                                                    <h4 className="text-base font-semibold text-white mb-1">
+                                                        {item.name}
+                                                    </h4>
+                                                    <p className="text-neutral-500 text-sm mb-2">
+                                                        {item.issuer}
+                                                    </p>
+                                                    <p className="text-neutral-400 text-sm">
+                                                        {item.description}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
 
                                         {/* Card Number Indicator */}
-                                        <div className="flex items-center justify-between mt-6 pt-6 border-t border-neutral-800">
+                                        <div className="flex items-center justify-between mt-6 pt-6 border-t border-neutral-800 flex-shrink-0">
                                             <span className="text-sm text-neutral-600 font-medium">
                                                 {String(index + 1).padStart(2, '0')} / {String(cards.length).padStart(2, '0')}
                                             </span>
@@ -186,4 +233,4 @@ function About() {
     )
 }
 
-export default About
+export default Credentials

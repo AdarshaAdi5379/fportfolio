@@ -1,10 +1,11 @@
 import Navigation from './components/Navigation'
+import Hero from './components/Hero'
 
 function App() {
     return (
         <div className="App">
             <Navigation />
-            <h1>Adarsha K K Portfolio</h1>
+            <Hero />
         </div>
     )
 }

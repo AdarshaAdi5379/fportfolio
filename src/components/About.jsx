@@ -69,7 +69,7 @@ function About() {
     }
 
     return (
-        <section id="about" className="py-20 px-6 bg-black">
+        <section id="about" className="py-24 px-6 bg-neutral-50 dark:bg-black transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
                 {/* Section Label */}
                 <p className="text-sm uppercase tracking-wide text-neutral-500 mb-4 font-medium">
@@ -77,11 +77,11 @@ function About() {
                 </p>
 
                 {/* Section Heading */}
-                <h2 className="text-3xl font-semibold text-white mb-4">
+                <h2 className="text-3xl font-semibold text-neutral-900 dark:text-white mb-4">
                     Background & Approach
                 </h2>
 
-                <p className="text-neutral-400 text-base max-w-2xl mb-16">
+                <p className="text-neutral-600 dark:text-neutral-400 text-base max-w-2xl mb-16">
                     A comprehensive overview of my professional journey, philosophy, and expertise.
                 </p>
 
@@ -103,7 +103,7 @@ function About() {
                                         opacity: style.opacity,
                                     }}
                                 >
-                                    <div className="bg-neutral-900 border border-white/10 rounded-3xl p-8 md:p-10 h-full shadow-2xl shadow-black/50 flex flex-col">
+                                    <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 rounded-3xl p-8 md:p-10 h-full shadow-2xl shadow-neutral-200/50 dark:shadow-black/50 flex flex-col transition-colors duration-300">
                                         {/* Icon with Accent Color */}
                                         <div
                                             className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
@@ -118,18 +118,18 @@ function About() {
                                         </div>
 
                                         {/* Card Title */}
-                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white mb-4 tracking-tight">
                                             {card.title}
                                         </h3>
 
                                         {/* Card Description */}
-                                        <p className="text-neutral-400 leading-relaxed text-base md:text-lg flex-grow">
+                                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-base md:text-lg flex-grow">
                                             {card.description}
                                         </p>
 
                                         {/* Card Number Indicator */}
-                                        <div className="flex items-center justify-between mt-6 pt-6 border-t border-neutral-800">
-                                            <span className="text-sm text-neutral-600 font-medium">
+                                        <div className="flex items-center justify-between mt-6 pt-6 border-t border-neutral-100 dark:border-neutral-800">
+                                            <span className="text-sm text-neutral-500 dark:text-neutral-600 font-medium">
                                                 {String(index + 1).padStart(2, '0')} / {String(cards.length).padStart(2, '0')}
                                             </span>
                                             <div
@@ -154,11 +154,11 @@ function About() {
                             >
                                 <div
                                     className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex
-                                        ? 'w-8 opacity-100'
-                                        : 'opacity-30 hover:opacity-60'
+                                            ? 'w-8 opacity-100'
+                                            : 'opacity-30 hover:opacity-60'
                                         }`}
                                     style={{
-                                        backgroundColor: index === activeIndex ? card.accent : '#737373'
+                                        backgroundColor: index === activeIndex ? card.accent : '#A3A3A3'
                                     }}
                                 />
                             </button>
@@ -169,13 +169,13 @@ function About() {
                     <div className="flex items-center justify-center gap-4 mt-8">
                         <button
                             onClick={() => setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length)}
-                            className="px-6 py-2 bg-neutral-900 border border-neutral-800 text-neutral-400 rounded-lg hover:border-neutral-600 hover:text-white transition-all duration-200 text-sm font-medium"
+                            className="px-6 py-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-lg hover:border-neutral-400 dark:hover:border-neutral-600 hover:text-black dark:hover:text-white transition-all duration-200 text-sm font-medium shadow-sm hover:shadow"
                         >
                             ← Previous
                         </button>
                         <button
                             onClick={() => setActiveIndex((prev) => (prev + 1) % cards.length)}
-                            className="px-6 py-2 bg-neutral-900 border border-neutral-800 text-neutral-400 rounded-lg hover:border-neutral-600 hover:text-white transition-all duration-200 text-sm font-medium"
+                            className="px-6 py-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-lg hover:border-neutral-400 dark:hover:border-neutral-600 hover:text-black dark:hover:text-white transition-all duration-200 text-sm font-medium shadow-sm hover:shadow"
                         >
                             Next →
                         </button>

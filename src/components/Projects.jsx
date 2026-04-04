@@ -1,50 +1,50 @@
 function Projects() {
     const projects = [
         {
-            role: "Full Stack Developer",
-            year: "2024",
-            title: "RecruiterRisk",
-            description: "AI-powered trust verification platform for recruitment that detects fraudulent job postings and verifies recruiter authenticity",
-            techStack: ["React", "Node.js", "Python", "TensorFlow", "MongoDB", "AWS"],
+            role: "Backend & Platform Engineer",
+            year: "2025 – Present",
+            title: "HOST (Multi-tenant PaaS)",
+            description: "Production-grade multi-tenant PaaS that provisions isolated WordPress and full-stack application deployments with Docker orchestration, centralized gateway routing, and automated encrypted backups.",
+            techStack: ["Docker", "Nginx", "AWS S3", "AWS RDS", "Linux", "WordPress"],
             links: {
-                github: "https://github.com/AdarshaAdi5379/conf-apply",
-                live: "https://recruiterrisk.vercel.app"
+                github: null,
+                live: null
             },
             image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
         },
         {
-            role: "ML Engineer",
+            role: "Full Stack Developer",
             year: "2024",
-            title: "GM-UNet Soft Tissue Tumor Diagnosis",
-            description: "Deep learning model for medical image segmentation with improved accuracy using Graph Attention Mechanisms",
-            techStack: ["Python", "PyTorch", "OpenCV", "NumPy", "Medical Imaging"],
+            title: "RecruiterRisk (Recruiter Trust Platform)",
+            description: "Microservice-oriented MERN platform that detects fraudulent job postings using external verification APIs and trust-scoring workflows, with JWT auth, RBAC, and real-time analytics dashboards.",
+            techStack: ["React", "Node.js", "Express", "MongoDB", "REST APIs", "JWT"],
             links: {
-                github: "https://github.com/AdarshaAdi5379/soft-tissue-tumor-detection",
-                live: null
+                github: "https://github.com/AdarshaAdi5379/conf-apply",
+                live: "https://recruiterrisk.vercel.app"
             },
             image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
         },
         {
-            role: "Full Stack Developer",
-            year: "2023 - 2024",
-            title: "TaskZen",
-            description: "Project management platform with real-time collaboration, task tracking, and progress visualization",
-            techStack: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io", "Docker"],
+            role: "ML Engineer",
+            year: "2024",
+            title: "Soft Tissue Tumor Diagnosis (GM-UNet)",
+            description: "Deep learning pipeline for MRI tumor segmentation (preprocessing → training → evaluation) with Dice/IoU tracking and stable convergence; achieved 87% validation accuracy.",
+            techStack: ["Python", "TensorFlow", "NumPy", "Pandas", "Medical Imaging"],
             links: {
-                github: "https://github.com/AdarshaAdi5379/TaskCode",
-                live: "https://task-code-nine.vercel.app/"
+                github: "https://github.com/AdarshaAdi5379/soft-tissue-tumor-detection",
+                live: null
             },
             image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
         },
         {
-            role: "DevOps Engineer",
-            year: "2023",
-            title: "Global Terminal Calculator",
-            description: "DevOps-focused terminal calculator with CI/CD automation and containerized deployment",
-            techStack: ["Python", "Docker", "Kubernetes", "GitHub Actions", "AWS"],
+            role: "Backend Engineer",
+            year: "2026",
+            title: "PayStream (Pine Labs Hackathon — AWS)",
+            description: "Automated payment-trigger platform built with FastAPI and rule-driven workflows.",
+            techStack: ["Python", "FastAPI", "AWS", "REST APIs"],
             links: {
-                github: "https://github.com/AdarshaAdi5379/terminal-calci",
-                live: "https://hub.docker.com/repository/docker/adarsha5389/terminal-calci/general"
+                github: null,
+                live: null
             },
             image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=600&fit=crop"
         }
@@ -110,15 +110,17 @@ function Projects() {
 
                                 {/* Links */}
                                 <div className="flex gap-4 pt-4 border-t border-neutral-100 dark:border-neutral-800/50">
-                                    <a
-                                        href={project.links.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-1"
-                                    >
-                                        GitHub
-                                        <span className="text-neutral-400 group-hover:translate-x-0.5 transition-transform">→</span>
-                                    </a>
+                                    {project.links.github && (
+                                        <a
+                                            href={project.links.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-1"
+                                        >
+                                            GitHub
+                                            <span className="text-neutral-400 group-hover:translate-x-0.5 transition-transform">→</span>
+                                        </a>
+                                    )}
                                     {project.links.live && (
                                         <a
                                             href={project.links.live}

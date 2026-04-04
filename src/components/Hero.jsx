@@ -30,7 +30,7 @@ function Hero() {
 
                 {/* Subtext */}
                 <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12 max-w-2xl mx-auto">
-                    Full-stack developer and AI engineer specializing in high-performance web applications and cloud infrastructure.
+                    Full Stack Software Engineer focused on backend and platform systems — multi-tenant platforms, APIs, and production deployments.
                 </p>
 
                 {/* CTA Buttons */}
@@ -42,7 +42,7 @@ function Hero() {
                         Get in Touch
                     </a>
                     <a
-                        href="#projects"
+                        href="#work"
                         className="px-8 py-4 text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white font-medium rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200"
                     >
                         View Projects

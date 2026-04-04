@@ -10,10 +10,10 @@ function Credentials() {
             title: "Education",
             items: [
                 {
-                    degree: "Bachelor of Technology in Computer Science",
-                    institution: "Visveswaraya Technological University",
+                    degree: "B.E. Computer Science and Engineering",
+                    institution: "PES Institute of Technology and Management, Shivamogga",
                     period: "2022 - 2026",
-                    details: "Strong foundation in algorithms, data structures, software engineering, and artificial intelligence"
+                    details: "Strong foundation in algorithms, data structures, software engineering, and artificial intelligence."
                 }
             ],
             accent: "#F59E0B"

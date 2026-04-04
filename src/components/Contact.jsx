@@ -76,7 +76,7 @@ function Contact() {
                                 </div>
                                 <div className="flex items-center gap-3 text-neutral-600 dark:text-neutral-400">
                                     <Phone className="w-5 h-5 text-neutral-400 dark:text-neutral-500" />
-                                    <span className="text-sm">+91 80507 90981</span>
+                                    <span className="text-sm">+91 8050790981</span>
                                 </div>
                             </div>
                         </div>

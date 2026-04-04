@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { GraduationCap, Award } from 'lucide-react'
 
 function Credentials() {
@@ -26,21 +26,6 @@ function Credentials() {
                     name: "AWS Certified Solutions Architect",
                     issuer: "Amazon Web Services",
                     description: "Cloud architecture and infrastructure design"
-                },
-                {
-                    name: "Google Cloud Professional Developer",
-                    issuer: "Google Cloud",
-                    description: "Cloud-native application development"
-                },
-                {
-                    name: "TensorFlow Developer Certificate",
-                    issuer: "TensorFlow",
-                    description: "Machine learning and deep learning"
-                },
-                {
-                    name: "Full Stack Web Development Specialization",
-                    issuer: "Coursera",
-                    description: "End-to-end web application development"
                 }
             ],
             accent: "#EC4899"
@@ -57,14 +42,6 @@ function Credentials() {
             accent: "#10B981"
         }
     ]
-
-    // Auto-rotate cards every 5 seconds
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % cards.length)
-        }, 5000)
-        return () => clearInterval(interval)
-    }, [cards.length])
 
     // Calculate card position and styling
     const getCardStyle = (index) => {
@@ -129,7 +106,7 @@ function Credentials() {
                                         opacity: style.opacity,
                                     }}
                                 >
-                                    <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 rounded-3xl p-8 md:p-10 h-full shadow-2xl shadow-neutral-200/50 dark:shadow-black/50 flex flex-col overflow-y-auto transition-colors duration-300">
+                                    <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 rounded-3xl p-8 md:p-10 h-full shadow-2xl shadow-neutral-200/50 dark:shadow-black/50 flex flex-col transition-colors duration-300">
                                         {/* Icon with Accent Color */}
                                         <div
                                             className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 flex-shrink-0"

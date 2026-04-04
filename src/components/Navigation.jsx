@@ -37,6 +37,7 @@ function Navigation() {
                     {[
                         ['Work', '#work'],
                         ['Skills', '#skills'],
+                        ['Credentials', '#credentials'],
                         ['About', '#about'],
                         ['Process', '#process']
                     ].map(([label, href]) => (

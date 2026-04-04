@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Code2, Lightbulb, Briefcase } from 'lucide-react'
 
 function About() {
@@ -30,14 +30,6 @@ function About() {
             accent: "#34D399"
         }
     ]
-
-    // Auto-rotate cards every 4 seconds
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % cards.length)
-        }, 4000)
-        return () => clearInterval(interval)
-    }, [cards.length])
 
     // Calculate card position and styling
     const getCardStyle = (index) => {

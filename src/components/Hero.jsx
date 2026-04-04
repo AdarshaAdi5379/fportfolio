@@ -47,6 +47,13 @@ function Hero() {
                     >
                         View Projects
                     </a>
+                    <a
+                        href="/Adarsha_KK_Dev.pdf"
+                        download
+                        className="px-8 py-4 text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white font-medium rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200"
+                    >
+                        Download Resume
+                    </a>
                 </div>
             </div>
 

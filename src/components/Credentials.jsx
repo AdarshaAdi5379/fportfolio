@@ -72,7 +72,8 @@ function Credentials() {
     }
 
     return (
-        <section id="credentials" className="py-24 px-6 bg-neutral-50 dark:bg-black transition-colors duration-300">
+        <section id="credentials" className="relative py-24 px-6 bg-neutral-50 dark:bg-black transition-colors duration-300">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent dark:via-neutral-800" />
             <div className="max-w-6xl mx-auto">
                 {/* Section Label */}
                 <p className="text-sm uppercase tracking-wide text-neutral-500 mb-4 font-medium">

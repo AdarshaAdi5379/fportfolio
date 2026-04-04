@@ -10,10 +10,11 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Handle form submission - you can integrate with EmailJS, Formspree, etc.
-        console.log('Form submitted:', formData)
-        // Reset form
-        setFormData({ name: '', email: '', message: '' })
+        const toEmail = 'adarshakk1234@gmail.com'
+        const subject = `Portfolio message from ${formData.name}`
+        const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        const mailtoUrl = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+        window.location.href = mailtoUrl
     }
 
     const handleChange = (e) => {

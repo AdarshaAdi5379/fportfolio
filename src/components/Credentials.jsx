@@ -44,6 +44,17 @@ function Credentials() {
                 }
             ],
             accent: "#EC4899"
+        },
+        {
+            icon: Award,
+            title: "Achievements",
+            items: [
+                {
+                    name: "Pine Labs Hackathon (AWS)",
+                    description: "Built PayStream, an automated payment-trigger platform using FastAPI and rule-driven workflows."
+                }
+            ],
+            accent: "#10B981"
         }
     ]
 
@@ -167,6 +178,20 @@ function Credentials() {
                                                     <p className="text-neutral-500 dark:text-neutral-500 text-sm mb-2">
                                                         {item.issuer}
                                                     </p>
+                                                    <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                                                        {item.description}
+                                                    </p>
+                                                </div>
+                                            ))}
+
+                                            {card.title === "Achievements" && card.items.map((item, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="pb-4 border-b border-neutral-100 dark:border-neutral-800 last:border-0 last:pb-0"
+                                                >
+                                                    <h4 className="text-base font-semibold text-neutral-900 dark:text-white mb-2">
+                                                        {item.name}
+                                                    </h4>
                                                     <p className="text-neutral-600 dark:text-neutral-400 text-sm">
                                                         {item.description}
                                                     </p>

@@ -38,6 +38,7 @@ function Skills() {
                         { name: "AWS", bg: "#232F3E", color: "#FFF" },
                         { name: "MongoDB", bg: "#47A248", color: "#FFF" },
                         { name: "PostgreSQL", bg: "#4169E1", color: "#FFF" },
+                        { name: "MySQL", bg: "#00758F", color: "#FFF" },
                     ].map((skill, index) => (
                         <div
                             key={index}
@@ -68,6 +69,7 @@ function Skills() {
                         { name: "AWS", bg: "#232F3E", color: "#FFF" },
                         { name: "MongoDB", bg: "#47A248", color: "#FFF" },
                         { name: "PostgreSQL", bg: "#4169E1", color: "#FFF" },
+                        { name: "MySQL", bg: "#00758F", color: "#FFF" },
                     ].map((skill, index) => (
                         <div
                             key={`dup-${index}`}
@@ -98,15 +100,14 @@ function Skills() {
                         { name: "Git", bg: "#F05032", color: "#FFF" },
                         { name: "Linux", bg: "#FCC624", color: "#000" },
                         { name: "Redis", bg: "#DC382D", color: "#FFF" },
-                        { name: "GraphQL", bg: "#E10098", color: "#FFF" },
                         { name: "Tailwind", bg: "#38B2AC", color: "#FFF" },
-                        { name: "Prisma", bg: "#2D3748", color: "#FFF" },
-                        { name: "Jest", bg: "#C21325", color: "#FFF" },
-                        { name: "Figma", bg: "#F24E1E", color: "#FFF" },
-                        { name: "Vercel", bg: "#000000", color: "#FFF" },
-                        { name: "OpenAI API", bg: "#412991", color: "#FFF" },
-                        { name: "Three.js", bg: "#000000", color: "#FFF" },
+                        { name: "Terraform", bg: "#7B42BC", color: "#FFF" },
+                        { name: "CI/CD", bg: "#111827", color: "#FFF" },
+                        { name: "GitHub Actions", bg: "#2088FF", color: "#FFF" },
                         { name: "Express", bg: "#000000", color: "#FFF" },
+                        { name: "Java", bg: "#E11D48", color: "#FFF" },
+                        { name: "JavaScript", bg: "#F7DF1E", color: "#000" },
+                        { name: "C", bg: "#1F6FEB", color: "#FFF" },
                     ].map((skill, index) => (
                         <div
                             key={index}
@@ -128,15 +129,14 @@ function Skills() {
                         { name: "Git", bg: "#F05032", color: "#FFF" },
                         { name: "Linux", bg: "#FCC624", color: "#000" },
                         { name: "Redis", bg: "#DC382D", color: "#FFF" },
-                        { name: "GraphQL", bg: "#E10098", color: "#FFF" },
                         { name: "Tailwind", bg: "#38B2AC", color: "#FFF" },
-                        { name: "Prisma", bg: "#2D3748", color: "#FFF" },
-                        { name: "Jest", bg: "#C21325", color: "#FFF" },
-                        { name: "Figma", bg: "#F24E1E", color: "#FFF" },
-                        { name: "Vercel", bg: "#000000", color: "#FFF" },
-                        { name: "OpenAI API", bg: "#412991", color: "#FFF" },
-                        { name: "Three.js", bg: "#000000", color: "#FFF" },
+                        { name: "Terraform", bg: "#7B42BC", color: "#FFF" },
+                        { name: "CI/CD", bg: "#111827", color: "#FFF" },
+                        { name: "GitHub Actions", bg: "#2088FF", color: "#FFF" },
                         { name: "Express", bg: "#000000", color: "#FFF" },
+                        { name: "Java", bg: "#E11D48", color: "#FFF" },
+                        { name: "JavaScript", bg: "#F7DF1E", color: "#000" },
+                        { name: "C", bg: "#1F6FEB", color: "#FFF" },
                     ].map((skill, index) => (
                         <div
                             key={`dup-${index}`}

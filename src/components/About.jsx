@@ -8,8 +8,14 @@ function About() {
         {
             icon: Code2,
             title: "Professional Background",
-            description: "I'm a full-stack developer and AI engineer with a focus on building production-ready systems. My work spans web applications, machine learning solutions, and cloud infrastructure—always with an emphasis on reliability, scalability, and clean code.",
+            description: "Software engineer experienced in building scalable multi-tenant platforms, backend APIs, and containerized microservice systems. Skilled in system orchestration, secure multi-user architecture, and production deployment using React, Django, Docker, and AWS.",
             accent: "#38BDF8"
+        },
+        {
+            icon: Briefcase,
+            title: "Work Experience",
+            description: "Edubricz Technologies — Full Stack Developer Intern (Aug 2025–Present, onsite): Architected HOST (multi-tenant PaaS) with Docker orchestration, centralized Nginx gateway routing, and encrypted AWS S3 backups; reduced deploy time 120s→50s and teardown 70s→35s. Freelance Frontend Developer (2024, remote): Delivered 6 production-ready React applications end-to-end.",
+            accent: "#F97316"
         },
         {
             icon: Lightbulb,

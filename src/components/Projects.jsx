@@ -13,6 +13,18 @@ function Projects() {
             image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
         },
         {
+            title: "Edubricz Sales Tracking System",
+            subtitleLeft: "React + PHP + MySQL",
+            subtitleRight: "Updated May 2026",
+            description: "A full field-sales route + visit tracking platform with GPS/photo proof, Google Maps coverage insights, reports, and an admin dashboard + mobile app workflow.",
+            techStack: ["React", "PHP", "MySQL", "Google Maps", "Capacitor"],
+            links: {
+                github: "https://github.com/AdarshaAdi5379/salesTracking",
+                live: "https://salestracking.edubricz.space/"
+            },
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+        },
+        {
             title: "Soft Tissue Tumor Detection (GM-UNet)",
             subtitleLeft: "Jupyter Notebook",
             subtitleRight: "Updated Mar 2026",

@@ -1,65 +1,60 @@
+import { ArrowDown, FileDown } from 'lucide-react'
+
 function Hero() {
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 bg-neutral-50 dark:bg-black overflow-hidden pt-32 md:pt-20 transition-colors duration-300">
-            {/* Grid Pattern Background */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"></div>
+        <section
+            id="hero"
+            className="relative min-h-[92vh] flex items-center px-6 pt-24 pb-16 bg-brand-cream dark:bg-black overflow-hidden transition-colors duration-300"
+        >
+            {/* Subtle grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_100%)]" />
 
-            {/* Radial Spotlight */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-neutral-50 to-neutral-50 dark:from-neutral-800/40 dark:via-black dark:to-black"></div>
+            {/* Warm accent wash (very subtle) */}
+            <div className="pointer-events-none absolute -top-24 right-[-10%] h-[520px] w-[520px] rounded-full bg-brand-gold/20 blur-3xl dark:bg-brand-gold/10" />
 
-            {/* Content */}
-            <div className="relative max-w-5xl w-full text-center z-10">
-                {/* Status Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm mb-10 transition-all hover:bg-white dark:hover:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 cursor-default">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                    </span>
-                    <span className="text-xs font-medium text-neutral-600 dark:text-neutral-400 uppercase tracking-wide">Available for Work</span>
+            <div className="relative max-w-6xl mx-auto w-full">
+                <div className="max-w-3xl">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-sand dark:border-neutral-800 bg-white/60 dark:bg-neutral-950/50 backdrop-blur-sm text-neutral-700 dark:text-neutral-400 text-xs font-medium">
+                        <span className="inline-block w-2 h-2 rounded-full bg-green-500" />
+                        Open to full-time roles
+                    </div>
+
+                    <h1 className="mt-6 font-sans font-semibold text-5xl md:text-7xl tracking-tight text-neutral-900 dark:text-white leading-[1.02]">
+                        Software Engineer — Full Stack Development — Backend Systems
+                    </h1>
+
+                    <p className="mt-6 text-base md:text-lg text-neutral-700 dark:text-neutral-400 max-w-2xl leading-relaxed">
+                        Software engineer with experience building scalable product-focused web applications and backend systems using React, Django, PostgreSQL, Docker, and AWS.
+                    </p>
+
+                    <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                        <a
+                            href="#work"
+                            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-brand-gold dark:bg-brand-gold text-neutral-900 font-semibold hover:bg-[#C9924E] dark:hover:bg-[#C9924E] transition-colors"
+                        >
+                            View Projects
+                        </a>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white border border-brand-sand dark:border-neutral-800 hover:border-brand-gold dark:hover:border-neutral-700 transition-colors font-semibold"
+                        >
+                            Contact Me
+                        </a>
+                        <a
+                            href="/Adarsha_KK_Dev.pdf"
+                            download
+                            className="inline-flex items-center gap-2 px-3 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                        >
+                            <FileDown className="w-4 h-4" />
+                            Resume
+                        </a>
+                    </div>
+
+                    <div className="mt-12 hidden md:flex items-center gap-2 text-neutral-600 dark:text-neutral-500 text-sm">
+                        <ArrowDown className="w-4 h-4" />
+                        <span>Scroll for featured work</span>
+                    </div>
                 </div>
-
-                {/* Headline with Gradient */}
-                <h1 className="font-sans font-bold text-5xl md:text-7xl lg:text-8xl tracking-tighter mb-8 leading-[1.1]">
-                    <span className="text-neutral-900 dark:text-white block">
-                        Building scalable
-                    </span>
-                    <span className="bg-gradient-to-b from-neutral-600 via-neutral-900 to-neutral-900 dark:from-white dark:via-neutral-200 dark:to-neutral-600 bg-clip-text text-transparent block">
-                        production systems.
-                    </span>
-                </h1>
-
-                {/* Subtext */}
-                <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12 max-w-2xl mx-auto">
-                    Full Stack Software Engineer focused on backend and platform systems — multi-tenant platforms, APIs, and production deployments.
-                </p>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a
-                        href="#contact"
-                        className="px-8 py-4 bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all duration-200 shadow-xl shadow-neutral-900/10 dark:shadow-white/10"
-                    >
-                        Get in Touch
-                    </a>
-                    <a
-                        href="#work"
-                        className="px-8 py-4 text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white font-medium rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200"
-                    >
-                        View Projects
-                    </a>
-                    <a
-                        href="/Adarsha_KK_Dev.pdf"
-                        download
-                        className="px-8 py-4 text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white font-medium rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200"
-                    >
-                        Download Resume
-                    </a>
-                </div>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block opacity-50">
-                <div className="w-1 h-12 rounded-full bg-gradient-to-b from-transparent via-neutral-400 dark:via-neutral-500 to-transparent"></div>
             </div>
         </section>
     )

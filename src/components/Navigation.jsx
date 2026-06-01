@@ -1,72 +1,59 @@
-import { useState, useEffect } from 'react'
-import { useTheme } from '../hooks/useTheme'
-import { Sun, Moon } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 function Navigation() {
     const [scrolled, setScrolled] = useState(false)
-    const { theme, toggleTheme } = useTheme()
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
-        }
+        const handleScroll = () => setScrolled(window.scrollY > 16)
+        handleScroll()
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     return (
-        <nav className={`fixed top-6 left-0 right-0 z-50 flex justify-center transition-all duration-300 ${scrolled ? 'translate-y-0' : 'translate-y-2'}`}>
-            <div className={`
-                flex items-center gap-8 px-8 py-4 rounded-full 
-                bg-white/80 dark:bg-black/80 backdrop-blur-md 
-                border border-neutral-200 dark:border-white/10 
-                shadow-xl shadow-neutral-200/50 dark:shadow-black/50
-                transition-all duration-300
-                ${scrolled ? 'py-3 px-6' : 'py-4 px-8'}
-            `}>
+        <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center transition-all duration-300">
+            <div
+                className={
+                    `flex items-center gap-3 sm:gap-6 px-6 py-3 rounded-full ` +
+                    `bg-white/85 backdrop-blur-md ` +
+                    `border border-brand-sand ` +
+                    `shadow-xl shadow-neutral-200/40 ` +
+                    `transition-all duration-300 ` +
+                    (scrolled ? 'translate-y-0' : 'translate-y-2')
+                }
+            >
                 <a
-                    href="#"
-                    className="text-neutral-900 dark:text-white font-medium hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors tracking-tight text-sm md:text-base whitespace-nowrap"
+                    href="#hero"
+                    className="text-neutral-900 font-medium hover:text-neutral-600 transition-colors tracking-tight text-sm md:text-base whitespace-nowrap"
                 >
                     Adarsha K K
                 </a>
 
                 <div className="hidden sm:flex items-center gap-1">
-                    <div className="w-px h-4 bg-neutral-200 dark:bg-white/10 mx-2"></div>
-
+                    <div className="w-px h-4 bg-neutral-200 mx-2" />
                     {[
                         ['Work', '#work'],
-                        ['Skills', '#skills'],
-                        ['Credentials', '#credentials'],
-                        ['About', '#about'],
-                        ['Process', '#process']
+                        ['Contact', '#contact'],
                     ].map(([label, href]) => (
                         <a
                             key={label}
                             href={href}
-                            className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white px-4 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 transition-all duration-200"
+                            className="text-sm text-neutral-700 hover:text-black px-4 py-1.5 rounded-full hover:bg-neutral-100 transition-all duration-200"
                         >
                             {label}
                         </a>
                     ))}
                 </div>
 
-                <div className="w-px h-4 bg-neutral-200 dark:bg-white/10 mx-2 hidden sm:block"></div>
+                <div className="w-px h-4 bg-neutral-200 mx-2 hidden sm:block" />
 
                 <div className="flex items-center gap-2">
-                    <button
-                        onClick={toggleTheme}
-                        className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-all duration-200"
-                        aria-label="Toggle theme"
-                    >
-                        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                    </button>
-
                     <a
-                        href="#contact"
-                        className="bg-neutral-900 dark:bg-white text-white dark:text-black text-sm font-medium px-5 py-2 rounded-full hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors"
+                        href="/Adarsha_KK_Dev.pdf"
+                        download
+                        className="bg-brand-gold text-neutral-900 text-sm font-medium px-5 py-2 rounded-full hover:bg-[#C9924E] transition-colors"
                     >
-                        Let's Talk
+                        Resume
                     </a>
                 </div>
             </div>

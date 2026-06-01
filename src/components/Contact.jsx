@@ -46,7 +46,7 @@ function Contact() {
     ]
 
     return (
-        <section id="contact" className="py-24 px-6 bg-neutral-50 dark:bg-black transition-colors duration-300">
+        <section id="contact" className="py-24 px-6 bg-brand-cream dark:bg-black transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
                 {/* Section Label */}
                 <p className="text-sm uppercase tracking-wide text-neutral-500 mb-4 font-medium">
@@ -54,7 +54,7 @@ function Contact() {
                 </p>
 
                 {/* Main Contact Card */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-3xl p-8 lg:p-12 mt-8 shadow-xl shadow-neutral-200/50 dark:shadow-none transition-colors duration-300">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 bg-white dark:bg-neutral-950 border border-brand-sand dark:border-neutral-800 rounded-3xl p-8 lg:p-12 mt-8 shadow-xl shadow-neutral-200/50 dark:shadow-none transition-colors duration-300">
 
                     {/* Left Column - Info */}
                     <div className="flex flex-col justify-between">
@@ -122,7 +122,7 @@ function Contact() {
                                     onChange={handleChange}
                                     required
                                     placeholder="John Doe"
-                                    className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white rounded-lg p-4 
+                                    className="bg-neutral-50 dark:bg-neutral-900 border border-brand-sand dark:border-neutral-800 text-neutral-900 dark:text-white rounded-lg p-4 
                                              placeholder:text-neutral-400 dark:placeholder:text-neutral-600 
                                              focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-500/20 focus:border-neutral-400 dark:focus:border-white focus:outline-none 
                                              transition-all duration-200"
@@ -145,7 +145,7 @@ function Contact() {
                                     onChange={handleChange}
                                     required
                                     placeholder="john@example.com"
-                                    className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white rounded-lg p-4 
+                                    className="bg-neutral-50 dark:bg-neutral-900 border border-brand-sand dark:border-neutral-800 text-neutral-900 dark:text-white rounded-lg p-4 
                                              placeholder:text-neutral-400 dark:placeholder:text-neutral-600 
                                              focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-500/20 focus:border-neutral-400 dark:focus:border-white focus:outline-none 
                                              transition-all duration-200"
@@ -168,7 +168,7 @@ function Contact() {
                                     required
                                     rows="6"
                                     placeholder="Tell me about your project..."
-                                    className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white rounded-lg p-4 
+                                    className="bg-neutral-50 dark:bg-neutral-900 border border-brand-sand dark:border-neutral-800 text-neutral-900 dark:text-white rounded-lg p-4 
                                              placeholder:text-neutral-400 dark:placeholder:text-neutral-600 resize-none
                                              focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-500/20 focus:border-neutral-400 dark:focus:border-white focus:outline-none 
                                              transition-all duration-200"
@@ -178,8 +178,8 @@ function Contact() {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold py-4 px-6 rounded-lg 
-                                         hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all duration-200 
+                                className="w-full bg-brand-gold dark:bg-brand-gold text-neutral-900 font-semibold py-4 px-6 rounded-lg 
+                                         hover:bg-[#C9924E] dark:hover:bg-[#C9924E] transition-all duration-200 
                                          flex items-center justify-center gap-2 group mt-2"
                             >
                                 <span>Send Message</span>
